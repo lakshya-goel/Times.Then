@@ -44,7 +44,20 @@
 
 ## Screenshots
 
-*Add screenshots of onboarding, home, search, bookmarks, article details, and accessibility features here.*
+![1](Screenshots/1.jpg)
+![1.1](Screenshots/1.1.jpg)
+![1.2](Screenshots/1.2.jpg)
+![2](Screenshots/2.jpg)
+![3](Screenshots/3.jpg)
+![Details](Screenshots/details.png)
+![Home](Screenshots/homescreen.png)
+![Home Dark](Screenshots/homescreen_dark.png)
+![Onboard 1](Screenshots/onboard_1.png)
+![Onboard 2](Screenshots/onboard_2.png)
+![Onboard 3](Screenshots/onboard_3.png)
+![Saved](Screenshots/saved_articles.png)
+![Search](Screenshots/search_articles.png)
+![Search Bar](Screenshots/search_bar.png)
 
 ---
 
