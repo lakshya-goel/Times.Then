@@ -1,62 +1,160 @@
-# NewsBreeze Android App
+# NewsApp
 
-<p align="center"><img src="https://socialify.git.ci/sourabhkumar47/NewsBreeze/image?description=1&amp;descriptionEditable=NewsBreeze%20is%20a%20dynamic%20and%20user-friendly%20news%20application%20developed%20for%20the%20Android%20platform%20using%20Kotlin%20and%20Jetpack%20Compose.&amp;font=Inter&amp;language=1&amp;name=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
+**A modern, accessible news reader app for Android. Get breaking news, search with voice, save favorites, and listen to articles with text-to-speech.**
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Accessibility](#accessibility)
+- [Testing](#testing)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Overview
+
+**NewsApp** delivers a seamless and accessible news reading experience on Android. Built with Jetpack Compose, it supports personalized news feeds, voice search, article saving, and text-to-speech. The app is structured using modern Android best practices, including clean architecture, dependency injection, and robust state management.
+
+---
+
+## Features
+
+- **Onboarding Flow:** Guides new users through the app’s features and accessibility options.
+- **Home Feed:** Browse curated, up-to-date headlines from major sources.
+- **Search with Voice or Text:** Search for news using text input or speech-to-text (STT).
+- **Bookmarks:** Save articles for later reading and manage your list of favorites.
+- **Article Details:** Read full articles, share, open in browser, and listen via TTS.
+- **Accessibility:** Listen to articles with Text-to-Speech and search using your voice.
+- **Offline Support:** Saved articles are accessible offline.
+- **Modern UI:** Built with Jetpack Compose and Material 3, supporting dark and light themes.
+- **Paging:** Infinite scrolling for both news and search results.
+- **Error & Loading States:** Friendly empty/error screens and shimmer loading effects.
+
+---
 
 ## Screenshots
 
-<p align="left">
-<img src="Screenshots/1.jpg" alt="drawing" width="250"/>
-<img src="Screenshots/2.jpg" alt="drawing" width="250"/>
-<img src="Screenshots/3.jpg" alt="drawing" width="250"/>
-</p>
+*Add screenshots of onboarding, home, search, bookmarks, article details, and accessibility features here.*
 
-## Description
+---
 
-It provides users with up-to-the-minute news from various sources, powered by the Newsapi.org API. The app is designed to offer a seamless and engaging experience, making it easy for users to stay informed about the latest events.
+## Architecture
 
-## Tech Stack Used
+- **MVVM Pattern:** ViewModels manage UI logic and state.
+- **Clean Architecture:**
+   - **Data Layer:** Room Database, Retrofit API, DataStore for preferences.
+   - **Domain Layer:** Use cases and repository interfaces.
+   - **Presentation Layer:** Jetpack Compose UIs, ViewModels, Navigation.
+- **Dependency Injection:** Dagger Hilt for lifecycle-safe dependency management.
+- **Paging:** Android Paging 3 for efficient data loading and infinite scroll.
 
-- **Programming Language:** Kotlin
-- **UI Toolkit:** Jetpack Compose
-- **Data Retrieval:** Retrofit
-- **Local Database:** Room
-- **Dependency Injection:** Dagger or Hilt
-- **Design Language:** Material Design principles
-- **API:** Newsapi.org
+---
 
+## Tech Stack
 
-## How to Contribute
+- **Language:** Kotlin
+- **UI:** Jetpack Compose, Material 3
+- **Navigation:** Jetpack Navigation Compose
+- **Database:** Room
+- **Networking:** Retrofit, Gson
+- **Paging:** Paging 3
+- **Dependency Injection:** Dagger Hilt
+- **Preferences:** DataStore
+- **Image Loading:** Coil
+- **Accessibility:** Android TTS, STT APIs
+- **Testing:** JUnit, Compose UI Testing
 
-We welcome contributions to enhance and improve NewsBreeze. If you're interested in contributing, here's how you can get started:
+---
 
-1. **Fork the Repository:** Start by forking the NewsBreeze repository to your own GitHub account.
+## Getting Started
 
-2. **Clone the Repository:** Clone the forked repository to your local machine using the following command:
-   ```
-   git clone https://github.com/your-username/NewsBreeze.git
-   ```
+### Prerequisites
 
-3. **Create a Branch:** Create a new branch for your contributions.
-   ```
-   git checkout -b feature/new-feature
-   ```
+- Android Studio Giraffe or newer
+- Android SDK 33+
+- Internet connection for news API
 
-4. **Make Changes:** Implement the features or fixes you'd like to contribute.
+### Installation
 
-5. **Commit Changes:** Commit your changes with clear and concise messages.
-   ```
-   git commit -m "Add new feature" 
-   ```
+1. **Clone the repository:**
+```
+   git clone https://github.com/lakshya-goel/Times.Then.git
+   cd newsapp
+```
 
-6. **Push Changes:** Push your changes to your forked repository.
-   ```
-   git push origin feature/new-feature
-   ```
+2. **Open in Android Studio:**
+- Select `Open an existing project` and choose the cloned directory.
 
-7. **Create a Pull Request:** Open a pull request from your branch to the main repository. Provide a detailed description of your changes.
+3. **API Key:**
+- The app uses [NewsAPI.org](https://newsapi.org/) for news data.
+- Replace the placeholder in `Constants.kt` with your own API key if needed.
 
-## Code of Conduct
+4. **Build and Run:**
+- Connect your device or start an emulator.
+- Click **Run** or use `Shift + F10`.
 
-Please note that NewsBreeze follows a [Code of Conduct] to ensure a positive and inclusive community. Make sure to adhere to it in all interactions.
+---
 
-Feel free to reach out if you have any questions or need assistance. Happy contributing!
+## Configuration
+
+- **Keystore:**  
+  For release builds, add your keystore files under `app/keystores/` and configure signing in `build.gradle`.
+- **API Base URL:**  
+  Set in `Constants.kt`.
+- **Database:**  
+  Room database auto-initializes; no manual setup required.
+
+---
+
+## Accessibility
+
+- **Text-to-Speech (TTS):**  
+  Tap the speaker icon in the article detail screen to listen to the article content.
+- **Speech-to-Text (STT):**  
+  Tap the microphone icon in the search bar to search news by voice.
+- **Inclusive Design:**  
+  UI colors, typography, and navigation are optimized for accessibility and screen readers.
+
+---
+
+- **Compose UI Testing:**  
+  See `androidTest/` for Compose UI test examples.
+
+---
+
+## Troubleshooting
+
+- **App Crashes on Image Load:**
+- Ensure all drawable resource files are valid, appropriately sized, and named in lowercase with underscores.
+- Large image files can cause memory issues; resize images before adding to the project.
+- **API Errors:**
+- Check your NewsAPI key and network connection.
+- **TTS/STT Issues:**
+- Ensure device has Google TTS engine and microphone permissions enabled.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new features.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+*Inspired by modern Android best practices and clean architecture principles. For questions or support, open an issue on GitHub.*
+

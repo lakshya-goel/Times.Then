@@ -13,7 +13,7 @@ val pages = listOf(
     Page(
         title = "Welcome to Times.Then",
         description = "Your go-to source for breaking news, discovering content, and in-depth stories",
-        image = R.drawable.onboarding1
+        image = R.drawable.onboarding6
     ),
     Page(
         title = "Never Miss a Story",
