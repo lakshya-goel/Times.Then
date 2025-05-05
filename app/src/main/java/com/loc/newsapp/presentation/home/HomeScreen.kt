@@ -58,7 +58,7 @@ fun HomeScreen(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Image(
-                painter = painterResource(id = R.drawable.logo_modified),
+                painter = painterResource(id = R.drawable.app_logo),
                 contentDescription = null,
                 modifier = Modifier
                     .width(200.dp)

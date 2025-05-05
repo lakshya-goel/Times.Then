@@ -1,6 +1,7 @@
 package com.loc.newsapp.presentation.onboarding
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,6 +19,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import com.loc.newsapp.presentation.common.NewsButton
@@ -96,6 +98,7 @@ fun OnBoardingScreen(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (buttonState.value[0].isNotEmpty()) {
                     NewsTextButton(
+                        modifier = Modifier.background(Color.LightGray),
                         text = buttonState.value[0],
                         onClick = {
                             scope.launch {
