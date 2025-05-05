@@ -51,9 +51,6 @@
 <img src="Screenshots/homescreen_dark.png" width="100px" />
 <img src="Screenshots/onboard_1.png" width="100px" />
 <img src="Screenshots/saved_articles.png" width="100px" />
-<img src="Screenshots/search_articles.png" width="100px" />
-<img src="Screenshots/search_bar.png" width="100px" />
-
 
 ---
 
