@@ -43,21 +43,17 @@
 ---
 
 ## Screenshots
+<h2>Screenshots</h2>
 
-![1](Screenshots/1.jpg)
-![1.1](Screenshots/1.1.jpg)
-![1.2](Screenshots/1.2.jpg)
-![2](Screenshots/2.jpg)
-![3](Screenshots/3.jpg)
-![Details](Screenshots/details.png)
-![Home](Screenshots/homescreen.png)
-![Home Dark](Screenshots/homescreen_dark.png)
-![Onboard 1](Screenshots/onboard_1.png)
-![Onboard 2](Screenshots/onboard_2.png)
-![Onboard 3](Screenshots/onboard_3.png)
-![Saved](Screenshots/saved_articles.png)
-![Search](Screenshots/search_articles.png)
-![Search Bar](Screenshots/search_bar.png)
+<img src="Screenshots/1.2.jpg" width="100px" /> <img src="Screenshots/3.jpg" width="100px" />
+<img src="Screenshots/details.png" width="100px" />
+<img src="Screenshots/homescreen.png" width="100px" />
+<img src="Screenshots/homescreen_dark.png" width="100px" />
+<img src="Screenshots/onboard_1.png" width="100px" />
+<img src="Screenshots/saved_articles.png" width="100px" />
+<img src="Screenshots/search_articles.png" width="100px" />
+<img src="Screenshots/search_bar.png" width="100px" />
+
 
 ---
 
